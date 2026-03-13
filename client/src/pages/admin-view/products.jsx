@@ -52,7 +52,7 @@ function AdminProducts() {
           editProduct({
             id: currentEditedId,
             formData,
-          })
+          }),
         ).then((data) => {
           console.log(data, "edit");
 
@@ -67,7 +67,7 @@ function AdminProducts() {
           addNewProduct({
             ...formData,
             image: uploadedImageUrl,
-          })
+          }),
         ).then((data) => {
           if (data?.payload?.success) {
             dispatch(fetchAllProducts());
